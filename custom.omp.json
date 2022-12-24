@@ -117,7 +117,7 @@
             "always_enabled": true
           },
           "style": "powerline",
-          "template": "\ufbab {{ .FormattedMs }} ",
+          "template": " \ufbab <b>{{ .FormattedMs }}</b> ",
           "type": "executiontime"
         },
         {
