@@ -45,9 +45,8 @@
 		  "foreground": "#193549",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "branch_icon": " <#ffffff>\ue0a0 </>",
             "fetch_stash_count": true,
-            "fetch_status": false,
+            "fetch_status": true,
             "fetch_upstream_icon": true
           },
           "style": "powerline",
