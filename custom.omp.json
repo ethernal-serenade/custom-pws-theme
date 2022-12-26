@@ -8,28 +8,31 @@
           "background": "#003543",
           "foreground": "#00c983",
           "leading_diamond": "\ue0b6",
+		  "trailing_diamond": "\ue0b0",
           "style": "diamond",
-          "template": "{{ .Icon }} {{ .HostName }} ",
+          "template": "{{ .Icon }} {{ .HostName }} Serenade ",
           "type": "os"
         },
         {
           "background": "#DA627D",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
           "properties": {
             "folder_icon": "\uf115",
             "folder_separator_icon": "\\",
             "home_icon": "\uf7db",
             "style": "folder"
           },
-          "style": "powerline",
           "template": " <#000>\uf07b \uf553</> {{ .Path }} ",
           "type": "path"
         },
 		{
 		  "type": "project",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "#193549",
 		  "background": "#2e9599",
 		  "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
@@ -43,68 +46,76 @@
             "{{ if gt .Behind 0 }}#89d1dc{{ end }}"
           ],
 		  "foreground": "#193549",
-          "powerline_symbol": "\ue0b0",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "style": "powerline",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
-          "type": "git"
+		  "type": "git"
         },
         {
           "background": "#76b367",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
 		{
 		  "type": "python",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "#100e23",
 		  "background": "#906cff",
 		  "template": " \uE235 {{ .Full }} "
 		},
 		{
 		  "type": "php",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "#ffffff",
 		  "background": "#4063D8",
 		  "template": " \ue73d {{ .Full }} "
 		},
 		{
 		  "type": "r",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "blue",
 		  "background": "lightWhite",
 		  "template": " R {{ .Full }} "
 		},
 		{
 		  "type": "ruby",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "#ffffff",
 		  "background": "#4063D8",
 		  "template": " \uE791 {{ .Full }}"
 		},
 		{
 		  "type": "swift",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "#ffffff",
 		  "background": "#f6553c",
 		  "template": " \ue755 {{ .Full }} "
 		},
 		{
 		  "type": "go",
-		  "style": "powerline",
-		  "powerline_symbol": "\uE0B0",
+		  "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
 		  "foreground": "#ffffff",
 		  "background": "#7FD5EA",
 		  "template": " \u202D\uFCD1 {{ .Full }} "
@@ -112,22 +123,24 @@
         {
           "background": "#83769c",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
           "properties": {
             "always_enabled": true
           },
-          "style": "powerline",
           "template": " \ufbab <b>{{ .FormattedMs }}</b> ",
           "type": "executiontime"
         },
         {
           "background": "#33658A",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "trailing_diamond": "\ue0b0",
+		  "style": "diamond",
           "properties": {
             "time_format": "3:04 PM"
           },
-          "style": "powerline",
           "template": " \uf017 {{ .CurrentDate | date .Format }} ",
           "type": "time"
         },
@@ -137,11 +150,11 @@
             "{{ if gt .Code 0 }}red{{ end }}"
           ],
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+		  "style": "diamond",
           "properties": {
             "always_enabled": true
           },
-          "style": "diamond",
           "template": " {{ if gt .Code 0 }}\uf525{{ else }}\uf469{{ end }}",
           "trailing_diamond": "\ue0b4",
           "type": "exit"
@@ -162,7 +175,7 @@
         {
           "foreground": "#CD4277",
           "style": "plain",
-          "template": "<#45F1C2><b>\u26a1</b></><b>Serenade</b> ",
+          "template": "<#45F1C2><b>\u26a1</b></><b>root</b> ",
           "type": "text"
         },
 		{
